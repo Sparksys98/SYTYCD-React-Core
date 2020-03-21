@@ -34,15 +34,6 @@ class App extends Component {
     try {
       const authors = await this.fetchAllAuthors();
       const books = await this.fetchAllBooks();
-
-      /**
-       * Alternatives: this version would run in parallel!
-       */
-      // const authorsReq = this.fetchAllAuthors();
-      // const booksReq = this.fetchAllBooks();
-      // const authors = await authorsReq;
-      // const books = await booksReq;
-
       this.setState({
         authors: authors,
         books: books,
